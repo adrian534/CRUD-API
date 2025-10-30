@@ -1,0 +1,17 @@
+\c escuela_db
+
+CREATE TABLE estudiantes (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    edad INTEGER NOT NULL,
+    carrera VARCHAR(100),
+    promedio DECIMAL(4,2),
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO estudiantes (nombre, edad, carrera, promedio) VALUES
+('Ana García', 20, 'Ingeniería en Sistemas', 88.5),
+('Carlos Mendoza', 22, 'Medicina', 92.3),
+('María López', 19, 'Arquitectura', 85.7);
+
+select* from estudiantes;
